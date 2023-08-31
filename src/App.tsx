@@ -1,8 +1,8 @@
-import HomePage from './features/home/homepage';
+import Layout from './app/layout/components/layout';
 
 function App() {
   return (
-    <HomePage />
+    <Layout />
   );
 }
 
