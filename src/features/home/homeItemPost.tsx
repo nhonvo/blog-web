@@ -1,4 +1,4 @@
-function Post() {
+function HomeItemPost() {
     return (
         <>
             <div className="post-preview">
@@ -14,4 +14,4 @@ function Post() {
         </>
     );
 }
-export default Post;
+export default HomeItemPost;

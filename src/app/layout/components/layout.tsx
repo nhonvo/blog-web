@@ -1,6 +1,8 @@
+import About from "../../../features/about/about";
+import Contact from "../../../features/contact/contact";
 import HomePage from "../../../features/home/homepage";
+import PostDetail from "../../../features/post/postDetail";
 import Footer from "./footer";
-import Header from "./header";
 import Navbar from "./navbar";
 
 function Layout() {
@@ -8,8 +10,10 @@ function Layout() {
     return (
         <>
             <Navbar />
-            <Header />
-            <HomePage />
+            {/* <About/> */}
+            {/* <Contact/> */}
+            {/* <HomePage /> */}
+            <PostDetail/>
             <Footer />
         </>
     );
