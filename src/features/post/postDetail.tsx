@@ -1,3 +1,4 @@
+import { Posts } from "../../app/models/Posts";
 
 const samplePost = {
     title: 'Getting Started with C# Programming',

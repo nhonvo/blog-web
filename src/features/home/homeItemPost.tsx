@@ -1,16 +1,23 @@
-function HomeItemPost() {
+import { Link } from "react-router-dom";
+import { Posts } from "../../app/models/Posts";
+
+function HomeItemPost(props: Posts) {
     return (
         <>
             <div className="post-preview">
-                <a href="post.html">
+                <Link to={`/detail/${props.id}`}>
                     <h2 className="post-title">
-                        This Site Connects Solo Travelers Who Are Looking for Someone to Travel and Split Expenses With.
+                        {props.title}
                     </h2>
-                </a>
+                    <p className="post-description">
+                        {props.description}
+                    </p>
+                </Link>
                 <p className="post-meta">Posted by
-                    <a href="#">Jane Doe</a>
-                    on September 18, 2019</p>
+                    <a href="#">{props.author}</a>
+                    on {props.date.toDateString()}</p>
             </div>
+            <hr></hr>
         </>
     );
 }

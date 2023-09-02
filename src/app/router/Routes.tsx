@@ -14,7 +14,7 @@ export const routes: RouteObject[] = [
             { path: 'home', element: <HomePage /> },
             { path: 'about', element: <About /> },
             { path: 'contact', element: <Contact /> },
-            { path: 'detail', element: <PostDetail /> },
+            { path: 'detail/:id', element: <PostDetail /> },
             { path: '*', element: <Navigate replace to='not-found' /> },
         ]
     }
