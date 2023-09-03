@@ -1,21 +1,27 @@
 import { Link } from "react-router-dom";
-import { Posts } from "../../app/models/Posts";
+import { Blog } from "../../app/models/Blog";
 
-function HomeItemPost(props: Posts) {
+
+interface BlogProps {
+    index: number;
+    item: Blog;
+}
+
+function HomeItemPost({ index, item: blog }: BlogProps) {
     return (
         <>
-            <div className="post-preview">
-                <Link to={`/detail/${props.id}`}>
+            <div className="post-preview" key={index}>
+                <Link to={`/detail/${blog.id}`}>
                     <h2 className="post-title">
-                        {props.title}
+                        {blog.title}
                     </h2>
                     <p className="post-description">
-                        {props.description}
+                        {blog.description}
                     </p>
                 </Link>
-                <p className="post-meta">Posted by
-                    <a href="#">{props.author}</a>
-                    on {props.date.toDateString()}</p>
+                <p className="post-meta">Posted by 
+                    <a href="#">{blog.author}</a>
+                    on {blog.date.toString()}</p>
             </div>
             <hr></hr>
         </>

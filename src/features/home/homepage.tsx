@@ -1,27 +1,21 @@
-import { Posts } from "../../app/models/Posts";
+import { useEffect } from "react";
+import { useStore } from "../../app/stores/store";
 import HomeItemPost from "./homeItemPost";
-const samplePosts: Posts[] = [
-    {
-        id: 1,
-        title: 'Getting Started with JavaScript',
-        author: 'John Doe',
-        date: new Date('August 10, 2023'),
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
+import { observer } from "mobx-react-lite";
 
-    },
-    {
-        id: 2,
-        title: 'Introduction to React.js',
-        author: 'Jane Smith',
-        date: new Date('August 15, 2023'),
-        content: 'React.js is a popular JavaScript library for building user interfaces...',
-        description: 'React.js is a popular JavaScript library for building user interfaces...',
-    }
-    // Add more sample posts as needed
-];
 
 function HomePage() {
+
+    const { blogStore } = useStore()
+
+    useEffect(() => {
+        // const fetchData = async () => {
+        //     blogStore.loadBlogs()
+        // };
+        // fetchData();
+        blogStore.loadBlogs().then();
+    }, [blogStore]);
+
     return (
         <>
             <header className="masthead" style={{ backgroundImage: `url('img/van-336606_1280.jpg'` }}>
@@ -40,12 +34,11 @@ function HomePage() {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-8 col-md-10 mx-auto">
-                        {samplePosts.map((post) => (
+                        {blogStore.blogs.map((item, index) => (
                             <HomeItemPost
-                                key={post.id}
-                                title={post.title}
-                                author={post.author}
-                                date={post.date} id={post.id} description={post.description} content={""} />
+                                key={item.id}
+                                item={item}
+                                index={index} />
                         ))}
                         <div className="clearfix">
                             <a className="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
@@ -57,4 +50,4 @@ function HomePage() {
         </>
     );
 }
-export default HomePage;
+export default observer(HomePage);

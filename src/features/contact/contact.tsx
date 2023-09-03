@@ -1,7 +1,7 @@
 function Contact() {
     return (
         <>
-            <header className="masthead">
+            <header className="masthead" style={{ backgroundImage: `url('img/van-336606_1280.jpg'` }}>
                 <div className="overlay"></div>
                 <div className="page-heading">
                     <h1>Contact Us</h1>

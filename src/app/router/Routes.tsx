@@ -3,7 +3,7 @@ import HomePage from "../../features/home/homepage";
 import App from "../../App";
 import About from "../../features/about/about";
 import Contact from "../../features/contact/contact";
-import PostDetail from "../../features/post/postDetail";
+import PostDetail from "../../features/blog/blogDetail";
 
 
 export const routes: RouteObject[] = [
