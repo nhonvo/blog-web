@@ -1,10 +1,11 @@
 import { createBrowserRouter, Navigate, RouteObject } from "react-router-dom";
-import HomePage from "../../features/home/homepage";
+import Home from "../../features/home/home";
 import App from "../../App";
 import About from "../../features/about/about";
 import Contact from "../../features/contact/contact";
-import Detail from "../../features/blog/Detail";
-import BlogProfile from "../../features/profile/blogProfile";
+import Profile from "../../features/profile/profile";
+import Detail from "../../features/detail/detail";
+import Blog from "../../features/blog/blog";
 
 
 export const routes: RouteObject[] = [
@@ -12,10 +13,11 @@ export const routes: RouteObject[] = [
         path: '/',
         element: <App />,
         children: [
-            { path: 'home', element: <HomePage /> },
+            { path: 'home', element: <Home /> },
             { path: 'about', element: <About /> },
+            { path: 'blogPage', element: <Blog /> },
             { path: 'contact', element: <Contact /> },
-            { path: 'profile', element: <BlogProfile /> },
+            { path: 'profile', element: <Profile /> },
             { path: 'detail/:id', element: <Detail /> },
             { path: '*', element: <Navigate replace to='not-found' /> },
         ]

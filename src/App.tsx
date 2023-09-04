@@ -1,7 +1,7 @@
 import { Outlet, ScrollRestoration, useLocation } from 'react-router-dom';
-import Navbar from './app/layout/components/navbar';
-import Footer from './app/layout/components/footer';
-import HomePage from './features/home/homepage';
+import Footer from './app/layout/footer';
+import Home from './features/home/home';
+import Navbar from './app/layout/navbar';
 
 function App() {
   const location = useLocation();
@@ -11,7 +11,7 @@ function App() {
       <ScrollRestoration />
       <Navbar title="Truong Nhon Blog" />
       {
-        location.pathname === '/' ? <HomePage /> :
+        location.pathname === '/' ? <Home /> :
           <>
             <Outlet />
           </>

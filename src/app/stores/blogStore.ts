@@ -1,10 +1,10 @@
 import { makeAutoObservable, runInAction } from "mobx";
 import agent from "../api/agent";
-import { Blog } from "../models/Blog";
+import { BlogData } from "../models/blogData";
 
 export default class BlogStore {
-    blogs: Blog[] = [];
-    blog: Blog | undefined = undefined;
+    blogs: BlogData[] = [];
+    blog: BlogData | undefined = undefined;
 
     constructor() {
         makeAutoObservable(this);

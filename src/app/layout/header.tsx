@@ -1,8 +1,8 @@
-interface HomeHeaderProp{
+interface HeaderProp{
     title: string,
     description: string
 }
-function HomeHeader(props: HomeHeaderProp) {
+function Header(props: HeaderProp) {
     return (
         <>
             <header className="masthead" style={{ backgroundImage: `url('img/background.png'` }}>
@@ -20,4 +20,4 @@ function HomeHeader(props: HomeHeaderProp) {
             </header></>
     );
 }
-export default HomeHeader;
+export default Header;

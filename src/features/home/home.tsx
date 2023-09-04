@@ -1,11 +1,12 @@
 import { useEffect } from "react";
 import { useStore } from "../../app/stores/store";
-import HomeItemPost from "./homeItemPost";
+import BlogItem from "./blogItem";
 import { observer } from "mobx-react-lite";
-import HomeHeader from "./homeHeader";
+import { Link } from "react-router-dom";
+import Header from "../../app/layout/header";
 
 
-function HomePage() {
+function Home() {
 
     const { blogStore } = useStore()
 
@@ -15,20 +16,20 @@ function HomePage() {
 
     return (
         <>
-            <HomeHeader title="Welcome to the Coding Blog"
+            <Header title="Welcome to the Coding Blog"
                 description="Explore the world of coding and programming."
             />
             <div className="container">
                 <div className="row">
                     <div className="col-lg-8 col-md-10 mx-auto">
                         {blogStore.blogs.map((item, index) => (
-                            <HomeItemPost
+                            <BlogItem
                                 key={item.id}
                                 item={item}
                                 index={index} />
                         ))}
                         <div className="clearfix">
-                            <a className="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+                            <Link to={`/blogPage`} className="btn btn-primary float-right" >Older Posts &rarr;</Link>
                         </div>
                     </div>
                 </div>
@@ -37,4 +38,4 @@ function HomePage() {
         </>
     );
 }
-export default observer(HomePage);
+export default observer(Home);

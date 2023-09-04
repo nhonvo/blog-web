@@ -1,12 +1,10 @@
-export interface Topic {
-    id: number
-    name: string
-}
-export interface Blog {
+import { TopicData } from "./topicData"
+
+export interface BlogData {
     id: number
     title: string
     description: string
-    topics: Topic[]
+    topics: TopicData[]
     content: string
     author: string
     date: Date

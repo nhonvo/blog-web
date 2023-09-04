@@ -1,4 +1,4 @@
-import HomeHeader from "../home/homeHeader";
+import HomeHeader from "../../app/layout/header";
 
 // Sample author data
 const authorInfo = {
@@ -8,7 +8,7 @@ const authorInfo = {
     website: 'https://www.truongnhon.com'
 };
 
-function BlogProfile() {
+function Profile() {
     return (
         <>
             <HomeHeader
@@ -26,4 +26,4 @@ function BlogProfile() {
         </>
     );
 }
-export default BlogProfile;
+export default Profile;

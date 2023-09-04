@@ -2,8 +2,9 @@ import { useEffect } from "react";
 import { useStore } from "../../app/stores/store";
 import { useParams } from "react-router-dom";
 import { observer } from "mobx-react-lite";
+import HomeHeader from "../../app/layout/header";
 
-function Detail() {
+function BlogDetail() {
 
     const { blogStore } = useStore()
     const { id } = useParams();
@@ -15,16 +16,11 @@ function Detail() {
         }
     }, [id, blogStore]);
 
+    const des = "Written by " + blog?.author + " on " + blog?.date.toString();
 
     return (
         <>
-            <header className="masthead">
-                <div className="overlay"></div>
-                <div className="page-heading">
-                    <h1>{blog?.title}</h1>
-                    <span className="subheading">Written by {blog?.author} on {blog?.date.toString()}</span>
-                </div>
-            </header>
+            <HomeHeader title={blog?.title ? blog.title.toString() : "Default Title"} description={des} />
             <div className="container">
 
                 <div className="row">
@@ -36,4 +32,4 @@ function Detail() {
         </>
     );
 }
-export default observer(Detail);
+export default observer(BlogDetail);

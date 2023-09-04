@@ -1,4 +1,4 @@
-import HomeHeader from "../home/homeHeader";
+import HomeHeader from "../../app/layout/header";
 
 function About() {
     return (

@@ -3,7 +3,7 @@ import { toast } from 'react-toastify';
 import { PaginatedResult } from '../models/pagination';
 import { router } from '../router/Routes';
 import { store } from '../stores/store';
-import { Blog } from '../models/Blog';
+import { BlogData } from '../models/blogData';
 
 const sleep = (delay: number) => {
     return new Promise((resolve) => {
@@ -73,9 +73,9 @@ const requests = {
 }
 
 const blog = {
-    list: () => requests.get<Blog[]>(`/Blog`),
+    list: () => requests.get<BlogData[]>(`/Blog`),
     // list: (id: string, pageIndex?: number, pageSize?: number) => requests.get<Posts>(`/Blog/${id}&PageIndex=${pageIndex}&PageSize=${pageSize}`),
-    details: (id: string) => requests.get<Blog>(`/Blog/${id}`),
+    details: (id: string) => requests.get<BlogData>(`/Blog/${id}`),
 }
 const agent = {
     blog

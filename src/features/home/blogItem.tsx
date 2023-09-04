@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
-import { Blog } from "../../app/models/Blog";
+import { BlogData } from "../../app/models/blogData";
 
 
 interface BlogProps {
     index: number;
-    item: Blog;
+    item: BlogData;
 }
 
-function HomeItemPost({ index, item: blog }: BlogProps) {
+function BlogItem({ index, item: blog }: BlogProps) {
     return (
         <>
             <div className="post-preview" key={index}>
@@ -19,12 +19,12 @@ function HomeItemPost({ index, item: blog }: BlogProps) {
                         {blog.description}
                     </p>
                 </Link>
-                <p className="post-meta">Posted by 
-                    <a href="#">{blog.author}</a>
+                <p className="post-meta">Posted by
+                    <Link to={`/profile`}>{blog.author}</Link>
                     on {blog.date.toString()}</p>
             </div>
             <hr></hr>
         </>
     );
 }
-export default HomeItemPost;
+export default BlogItem;
