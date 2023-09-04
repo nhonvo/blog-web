@@ -27,6 +27,9 @@ export default observer(function NavBar(props: NavBarProps) {
                             <li className="nav-item">
                                 <Menu.Item className="nav-link" as={NavLink} to='/contact'>Contact</Menu.Item>
                             </li>
+                            <li className="nav-item">
+                                <Menu.Item className="nav-link" as={NavLink} to='/profile'>Profile</Menu.Item>
+                            </li>
                         </ul>
                     </div>
                 </div>

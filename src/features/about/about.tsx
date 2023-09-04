@@ -1,13 +1,11 @@
+import HomeHeader from "../home/homeHeader";
+
 function About() {
     return (
         <>
-            <header className="masthead" style={{ backgroundImage: `url('img/van-336606_1280.jpg'` }}>
-                <div className="overlay"></div>
-                <div className="page-heading">
-                    <h1>About Us</h1>
-                    <span className="subheading">Learn more about our team and mission.</span>
-                </div>
-            </header>
+            <HomeHeader
+                title="About Us"
+                description="Learn more about our team and mission." />
 
             <div className="container">
                 <div className="row">
@@ -32,7 +30,6 @@ function About() {
                     </div>
                 </div>
             </div>
-
         </>
     );
 }

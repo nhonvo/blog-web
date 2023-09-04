@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useStore } from "../../app/stores/store";
 import HomeItemPost from "./homeItemPost";
 import { observer } from "mobx-react-lite";
+import HomeHeader from "./homeHeader";
 
 
 function HomePage() {
@@ -14,19 +15,9 @@ function HomePage() {
 
     return (
         <>
-            <header className="masthead" style={{ backgroundImage: `url('img/van-336606_1280.jpg'` }}>
-                <div className="overlay"></div>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-8 col-md-10 mx-auto">
-                            <div className="site-heading">
-                                <h1>Welcome to the Coding Blog</h1>
-                                <span className="subheading">Explore the world of coding and programming.</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </header>
+            <HomeHeader title="Welcome to the Coding Blog"
+                description="Explore the world of coding and programming."
+            />
             <div className="container">
                 <div className="row">
                     <div className="col-lg-8 col-md-10 mx-auto">

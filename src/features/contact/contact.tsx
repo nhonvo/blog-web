@@ -1,14 +1,11 @@
+import HomeHeader from "../home/homeHeader";
+
 function Contact() {
     return (
         <>
-            <header className="masthead" style={{ backgroundImage: `url('img/van-336606_1280.jpg'` }}>
-                <div className="overlay"></div>
-                <div className="page-heading">
-                    <h1>Contact Us</h1>
-                    <span className="subheading">Get in touch with us.</span>
-                </div>
-            </header>
-
+            <HomeHeader
+                title="Contact Us"
+                description="Get in touch with us." />
 
             <div className="container">
                 <div className="row">
