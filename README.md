@@ -9,9 +9,10 @@
 ## Check list
 
 - ui
-  - route
-  - agent/api &  store refer porfolio.webui
-  - 
+- search
+- topic page: list down all topics
+- page by topic
+- fix issue page detail miss css
 
 - admin
   - CRUD
