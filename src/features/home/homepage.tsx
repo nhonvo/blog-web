@@ -9,11 +9,7 @@ function HomePage() {
     const { blogStore } = useStore()
 
     useEffect(() => {
-        // const fetchData = async () => {
-        //     blogStore.loadBlogs()
-        // };
-        // fetchData();
-        blogStore.loadBlogs().then();
+        blogStore.loadBlogs();
     }, [blogStore]);
 
     return (

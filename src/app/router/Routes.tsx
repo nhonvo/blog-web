@@ -3,7 +3,7 @@ import HomePage from "../../features/home/homepage";
 import App from "../../App";
 import About from "../../features/about/about";
 import Contact from "../../features/contact/contact";
-import PostDetail from "../../features/blog/blogDetail";
+import Detail from "../../features/blog/Detail";
 
 
 export const routes: RouteObject[] = [
@@ -14,7 +14,7 @@ export const routes: RouteObject[] = [
             { path: 'home', element: <HomePage /> },
             { path: 'about', element: <About /> },
             { path: 'contact', element: <Contact /> },
-            { path: 'detail/:id', element: <PostDetail /> },
+            { path: 'detail/:id', element: <Detail /> },
             { path: '*', element: <Navigate replace to='not-found' /> },
         ]
     }

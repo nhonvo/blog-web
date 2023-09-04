@@ -1,6 +1,6 @@
 import { observer } from "mobx-react-lite";
-import { Link, NavLink } from "react-router-dom";
-import { Container, Menu } from "semantic-ui-react";
+import { NavLink } from "react-router-dom";
+import { Menu } from "semantic-ui-react";
 
 interface NavBarProps {
     title: string
@@ -23,9 +23,6 @@ export default observer(function NavBar(props: NavBarProps) {
                             </li>
                             <li className="nav-item">
                                 <Menu.Item className="nav-link" as={NavLink} to='/about'>About</Menu.Item>
-                            </li>
-                            <li className="nav-item">
-                                <Menu.Item className="nav-link" as={NavLink} to='/detail'>Post</Menu.Item>
                             </li>
                             <li className="nav-item">
                                 <Menu.Item className="nav-link" as={NavLink} to='/contact'>Contact</Menu.Item>

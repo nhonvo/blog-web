@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { useStore } from "../../app/stores/store";
 import { useParams } from "react-router-dom";
+import { observer } from "mobx-react-lite";
 
-function PostDetail() {
+function Detail() {
 
     const { blogStore } = useStore()
     const { id } = useParams();
@@ -35,4 +36,4 @@ function PostDetail() {
         </>
     );
 }
-export default PostDetail;
+export default observer(Detail);
